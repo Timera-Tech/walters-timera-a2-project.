@@ -21,6 +21,7 @@ namespace MohawkGame2D
             //Set window canvas
             Window.SetTitle("Canvas");
             Window.SetSize(800, 600);
+         
         }
 
         /// <summary>
