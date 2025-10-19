@@ -19,9 +19,9 @@ namespace MohawkGame2D
         public void Setup()
         {
             //Set window canvas
-            Window.SetTitle("Canvas");
+            Window.SetTitle("Random Circle");
             Window.SetSize(800, 600);
-         
+            Window.TargetFPS = 60;
         }
 
         /// <summary>
@@ -29,7 +29,8 @@ namespace MohawkGame2D
         /// </summary>
         public void Update()
         {
-
+            // clear the screen
+            Window.ClearBackground(Color.Magenta);
         }
     }
 
