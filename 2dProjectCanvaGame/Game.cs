@@ -21,7 +21,6 @@ namespace MohawkGame2D
             //Set window canvas
             Window.SetTitle("Random Circle");
             Window.SetSize(800, 600);
-            Window.TargetFPS = 60;
         }
 
         /// <summary>
@@ -30,7 +29,13 @@ namespace MohawkGame2D
         public void Update()
         {
             // clear the screen
-            Window.ClearBackground(Color.Magenta);
+            Window.ClearBackground(Color.Green);
+
+            //Draw the circle
+
+            Draw.FillColor = Color.Blue;
+            Draw.LineColor = Color.Magenta;
+            Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 25);
         }
     }
 
