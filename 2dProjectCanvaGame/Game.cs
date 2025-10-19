@@ -21,6 +21,7 @@ namespace MohawkGame2D
             //Set window canvas
             Window.SetTitle("Random Circle");
             Window.SetSize(800, 600);
+            Window.ClearBackground(Color.Green);
         }
 
         /// <summary>
@@ -29,13 +30,29 @@ namespace MohawkGame2D
         public void Update()
         {
             // clear the screen
-            Window.ClearBackground(Color.Green);
+            //Window.ClearBackground(Color.Green);
 
-            //Draw the circle
+            //Draw a circle
+            // Check if mouse left is clicked
+            if (Input.IsMouseButtonDown(MouseInput.Left))
+            {
+                Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 10);
+                // If it is, make circle color red
+                if (Input.IsMouseButtonDown(MouseInput.Left))
+                    Draw.FillColor = Color.Red;
+            }
 
-            Draw.FillColor = Color.Blue;
-            Draw.LineColor = Color.Magenta;
-            Draw.Circle(Input.GetMouseX(), Input.GetMouseY(), 25);
+            
+ 
+            //Draw a rectangle
+            if (Input.IsMouseButtonDown(MouseInput.Right))
+            {
+                Draw.Rectangle(Input.GetMouseX(), Input.GetMouseY(), 25, 25);
+                // If it is, make rectangle magenta
+                if (Input.IsMouseButtonDown (MouseInput.Right))
+                Draw.FillColor = Color.Blue;
+            }
+
         }
     }
 
